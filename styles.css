@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0f172a; /* Dark blue background */
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.header {
+    background: #020617;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav a:hover { color: #38bdf8; }
+
+/* Hero Section - Image and Text side by side */
+.hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1; /* Takes half space */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.features li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.features li i {
+    margin-right: 15px;
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.2);
+    padding: 6px;
+    border-radius: 50%;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: white;
+    color: #1e40af;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary:hover { transform: scale(1.05); }
+
+/* The Hero Image (Fixing your Issue) */
+.hero-image {
+    flex: 1; /* Takes the other half space */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Services Section */
+.section { padding: 80px 0; text-align: center; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #020617;
+    padding: 40px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); border: 1px solid #38bdf8; }
+
+.card i { font-size: 2.5rem; color: #38bdf8; margin-bottom: 20px; }
+
+.footer { padding: 40px; background: #020617; text-align: center; border-top: 1px solid #1e293b; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-container { flex-direction: column; text-align: center; }
+    .hero-image { justify-content: center; }
+    .hero-buttons { justify-content: center; }
+    .features li { justify-content: center; }
+}
+/* Specialized Teams Styling */
+.teams-section {
+    background-color: #0f172a; /* তোমার থিমের সাথে মিল রেখে ডার্ক ব্যাকগ্রাউন্ড */
+    padding: 80px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 50px;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.team-card {
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Circle Image Container */
+.team-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%; /* ইমেজ সার্কেল করার জন্য */
+    overflow: hidden;
+    border: 4px solid #38bdf8; /* ব্লু বর্ডার তোমার থিমের সাথে মিল রেখে */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ইমেজ যাতে নষ্ট না হয়ে সার্কেলের ভেতরে সুন্দর দেখায় */
+}
+
+.team-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* মোবাইল রেসপনসিভ */
+@media (max-width: 768px) {
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- Floating Sidebar Section --- */
+
+.floating-sidebar {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 9999;
+}
+
+/* Social Media Box */
+.social-links {
+    background: rgba(2, 6, 23, 0.9); /* Dark background matching your theme */
+    padding: 15px 10px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.social-links a {
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a:hover {
+    color: #38bdf8; /* Blue hover effect */
+    transform: scale(1.2);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    transform: rotate(10deg) scale(1.1);
+    background-color: #20ba5a;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .floating-sidebar {
+        right: 15px;
+        bottom: 20px;
+        gap: 15px;
+    }
+    .whatsapp-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 26px;
+    }
+    .social-links {
+        padding: 12px 8px;
+    }
+}
+/* Fiverr icon-er jonno specific green color */
+.social-links a .fa-fiverr:hover {
+    color: #1dbf73; /* Fiverr-er signature green color */
+}
