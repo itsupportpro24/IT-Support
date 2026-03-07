@@ -251,7 +251,7 @@ body {
 
 /* Social Media Box */
 .social-links {
-    background: rgba(2, 6, 23, 0.9); /* Dark background matching your theme */
+    background: rgba(2, 6, 23, 0.9); /* Dark background matching theme */
     padding: 15px 10px;
     border-radius: 30px;
     display: flex;
@@ -274,6 +274,11 @@ body {
 .social-links a:hover {
     color: #38bdf8; /* Blue hover effect */
     transform: scale(1.2);
+}
+
+/* Fiverr hover color */
+.social-links a:hover .fa-fiverr {
+    color: #1dbf73; /* Fiverr signature green */
 }
 
 /* WhatsApp Button */
@@ -312,8 +317,4 @@ body {
     .social-links {
         padding: 12px 8px;
     }
-}
-/* Fiverr icon-er jonno specific green color */
-.social-links a .fa-fiverr:hover {
-    color: #1dbf73; /* Fiverr-er signature green color */
 }
