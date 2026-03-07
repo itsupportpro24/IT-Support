@@ -420,5 +420,118 @@ body {
         flex-direction: column;
     }
 }
+/* --- Pricing Section Styling --- */
+.pricing-section {
+    padding: 80px 10%;
+    background-color: #020617; /* Dark theme matching your site */
+    text-align: center;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.1);
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    color: white;
+}
+
+/* Featured/Standard Card highlight */
+.pricing-card.featured {
+    border-color: #38bdf8;
+    transform: scale(1.05);
+    background: rgba(30, 41, 59, 0.9);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-features li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    margin-right: 10px;
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* Pricing Button */
+.pricing-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: transparent;
+    border: 2px solid #38bdf8;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.pricing-btn:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #38bdf8;
+    color: #020617;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .pricing-card {
+        width: 100%;
+        transform: scale(1) !important;
+    }
+}
+
 
 
