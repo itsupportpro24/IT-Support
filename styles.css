@@ -691,6 +691,79 @@ body {
         text-align: center;
     }
 }
+/* WhatsApp Widget Styles */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.wa-popup {
+    display: none; /* শুরুতে লুকানো থাকবে */
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+.wa-header {
+    background: #128C7E; /* WhatsApp Dark Green */
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wa-avatar { position: relative; }
+.wa-avatar img { width: 40px; height: 40px; border-radius: 50%; }
+.online-dot {
+    width: 10px; height: 10px; background: #4AD964;
+    border-radius: 50%; position: absolute; bottom: 0; right: 0;
+    border: 2px solid #128C7E;
+}
+
+.wa-body { padding: 20px; background: #e5ddd5; } /* WhatsApp Chat Background */
+
+.wa-msg {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 0 15px 15px 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.wa-options { display: flex; flex-direction: column; gap: 10px; }
+
+.wa-btn {
+    text-align: center;
+    background: white;
+    border: 1px solid #128C7E;
+    color: #128C7E;
+    padding: 8px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.wa-btn:hover { background: #128C7E; color: white; }
+
+.wa-float-btn {
+    width: 60px; height: 60px;
+    background: #25D366;
+    border: none; border-radius: 50%;
+    color: white; font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
 
 
