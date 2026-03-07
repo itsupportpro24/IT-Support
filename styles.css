@@ -624,6 +624,74 @@ body {
     flex-wrap: wrap;
     gap: 30px;
 }
+/* --- Footer Layout Fix --- */
+.footer {
+    background-color: #020617; /* Dark theme background */
+    padding: 60px 10%;
+    border-top: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* এটি তিনটি অংশকে দুই পাশে এবং মাঝখানে ছড়িয়ে দেবে */
+    align-items: center; /* সবগুলোকে লম্বালম্বিভাবে মাঝখানে রাখবে */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Middle Fiverr Link Style */
+.footer-fiverr-middle {
+    text-align: center;
+    flex: 1; /* মাঝখানের জায়গা দখল করবে */
+}
+
+.fiverr-link-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid rgba(29, 191, 115, 0.3); /* Fiverr green border */
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.fiverr-link-btn:hover {
+    background-color: rgba(29, 191, 115, 0.1);
+    color: #1dbf73; /* Fiverr Signature Green */
+    border-color: #1dbf73;
+}
+
+.fiverr-link-btn i {
+    font-size: 24px;
+}
+
+/* Right & Left Alignment */
+.footer-contact {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-copyright {
+    flex: 1;
+    text-align: right;
+    color: #94a3b8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-contact, .footer-copyright {
+        text-align: center;
+    }
+}
+
 
 
 
