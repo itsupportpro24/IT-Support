@@ -236,7 +236,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
-/* --- Floating Sidebar Section --- */
+/* --- Floating Sidebar Style --- */
 
 .floating-sidebar {
     position: fixed;
@@ -249,9 +249,9 @@ body {
     z-index: 9999;
 }
 
-/* Social Media Box */
+/* Social Media Container */
 .social-links {
-    background: rgba(2, 6, 23, 0.9); /* Dark background matching theme */
+    background: rgba(2, 6, 23, 0.9); /* Dark Blue matching theme */
     padding: 15px 10px;
     border-radius: 30px;
     display: flex;
@@ -263,27 +263,28 @@ body {
 
 .social-links a {
     color: white;
-    font-size: 18px;
-    transition: all 0.3s ease;
+    font-size: 20px;
+    transition: 0.3s;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* General Hover Effect */
 .social-links a:hover {
-    color: #38bdf8; /* Blue hover effect */
+    color: #38bdf8; 
     transform: scale(1.2);
 }
 
-/* Fiverr hover color */
+/* Fiverr Specific Hover Color */
 .social-links a:hover .fa-fiverr {
-    color: #1dbf73; /* Fiverr signature green */
+    color: #1dbf73; /* Fiverr Green */
 }
 
 /* WhatsApp Button */
 .whatsapp-btn {
-    background-color: #25d366; /* WhatsApp Green */
+    background-color: #25d366;
     color: white;
     width: 55px;
     height: 55px;
@@ -293,28 +294,16 @@ body {
     align-items: center;
     font-size: 30px;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
+    transition: 0.3s;
     text-decoration: none;
 }
 
 .whatsapp-btn:hover {
-    transform: rotate(10deg) scale(1.1);
-    background-color: #20ba5a;
+    transform: scale(1.1) rotate(10deg);
 }
 
-/* Mobile Adjustments */
+/* Mobile responsive */
 @media (max-width: 768px) {
-    .floating-sidebar {
-        right: 15px;
-        bottom: 20px;
-        gap: 15px;
-    }
-    .whatsapp-btn {
-        width: 48px;
-        height: 48px;
-        font-size: 26px;
-    }
-    .social-links {
-        padding: 12px 8px;
-    }
+    .floating-sidebar { right: 10px; bottom: 20px; }
+    .whatsapp-btn { width: 45px; height: 45px; font-size: 25px; }
 }
