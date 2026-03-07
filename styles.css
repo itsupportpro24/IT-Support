@@ -307,3 +307,41 @@ body {
     .floating-sidebar { right: 10px; bottom: 20px; }
     .whatsapp-btn { width: 45px; height: 45px; font-size: 25px; }
 }
+.nav{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.dropdown{
+    position:relative;
+}
+
+/* hidden by default */
+.submenu{
+    display:none;
+    position:absolute;
+    top:30px;
+    left:0;
+    background:#111;
+    width:220px;
+    border-radius:5px;
+}
+
+/* submenu items */
+.submenu a{
+    display:block;
+    padding:10px;
+    color:white;
+    text-decoration:none;
+}
+
+.submenu a:hover{
+    background:#333;
+}
+
+/* show on hover */
+.dropdown:hover .submenu{
+    display:block;
+}
+
