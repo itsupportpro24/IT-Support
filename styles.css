@@ -586,6 +586,44 @@ body {
         text-align: center;
     }
 }
+/* --- Footer Fiverr Link Styling --- */
+
+.footer-fiverr-link {
+    margin-top: 20px; /* কন্টাক্ট ইনফো থেকে গ্যাপ */
+    padding-top: 10px;
+}
+
+.footer-fiverr-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    padding-bottom: 5px;
+}
+
+/* Fiverr Signature Green on Hover */
+.footer-fiverr-link a:hover {
+    color: #1dbf73; 
+    border-color: #1dbf73;
+}
+
+.footer-fiverr-link i {
+    font-size: 20px;
+}
+
+/* Footer Container Layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
 
 
