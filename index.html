@@ -248,10 +248,55 @@
     </div>
     
    </div>
+   <div class="header-whatsapp-container">
+    <button class="top-wa-btn" onclick="toggleHeaderWA()">
+        <i class="fab fa-whatsapp"></i> Chat with Us
+    </button>
 
+    <div class="wa-chat-popup" id="headerWACard">
+        <div class="wa-popup-header">
+            <div class="header-user">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <h4>Customer Support</h4>
+                    <p>Online</p>
+                </div>
+            </div>
+            <button class="close-wa" onclick="toggleHeaderWA()">&times;</button>
+        </div>
+        <div class="wa-popup-body">
+            <div class="wa-chat-bubble">👋 Hi! How can we help you today?</div>
+            <div class="wa-quick-options">
+                <a href="https://wa.me/8801722607613?text=I%20need%20Network%20Support" target="_blank" class="wa-opt">Network Support</a>
+                <a href="https://wa.me/8801722607613?text=Pricing%20Inquiry" target="_blank" class="wa-opt">Pricing Inquiry</a>
+                <a href="https://wa.me/8801722607613?text=Tell%20me%20more" target="_blank" class="wa-opt">Tell me more</a>
+            </div>
+            <div class="wa-direct-input">
+                <input type="text" id="waDirectMsg" placeholder="Type and press enter..">
+                <button onclick="sendDirectWA()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleHeaderWA() {
+    const card = document.getElementById('headerWACard');
+    card.style.display = (card.style.display === 'block') ? 'none' : 'block';
+}
+
+function sendDirectWA() {
+    const msg = document.getElementById('waDirectMsg').value;
+    if(msg) {
+        window.open(`https://wa.me/8801722607613?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+}
+</script>
+    
 </body>
 
 </html>
+
 
 
 
