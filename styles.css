@@ -815,6 +815,36 @@ body {
 .wa-direct-input input { flex: 1; padding: 6px; border-radius: 4px; border: 1px solid #ccc; font-size: 12px; }
 .wa-direct-input button { background: #075e54; color: white; border: none; padding: 0 10px; border-radius: 4px; cursor: pointer; }
 
+/* --- উপরের ডান দিকের লোগো স্টাইল --- */
+.top-right-logo {
+    position: absolute;
+    top: 30px; /* আপনার মার্ক করা পজিশন অনুযায়ী উপরে */
+    right: 50px; /* ডান দিকে */
+    z-index: 1000; /* যাতে লোগোটি অন্য কন্টেন্টের ওপর থাকে */
+}
+
+.top-right-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white; /* আপনার ল্যান্ডিং পেজের মতো সাদা লেখা */
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.top-right-logo a i {
+    font-size: 24px;
+    color: #38bdf8; /* আপনার ল্যান্ডিং পেজের মতো ব্লু আইকন */
+}
+
+/* মাউস নিলে কালার আরও উজ্জ্বল হবে */
+.top-right-logo a:hover {
+    color: #38bdf8; /* লেখার কালার ব্লু হবে */
+}
+
+
 
 
 
