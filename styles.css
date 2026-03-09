@@ -347,7 +347,8 @@ body {
 /* About Section Styling */
 .about-section {
     background: #0f172a; /* Dark background from your theme */
-    padding: 100px 10%;
+    padding: 30px 10% 80px 10%;
+    margin-top: -20px; /* এই লাইনটি সেকশনকে আরও উপরে টেনে তুলবে */
     color: white;
 }
 
@@ -843,6 +844,7 @@ body {
 .top-right-logo a:hover {
     color: #38bdf8; /* লেখার কালার ব্লু হবে */
 }
+
 
 
 
