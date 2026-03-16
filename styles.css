@@ -844,7 +844,35 @@ body {
 .top-right-logo a:hover {
     color: #38bdf8; /* লেখার কালার ব্লু হবে */
 }
+/* হেডার কন্টেন্টকে এক লাইনে রাখার জন্য */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
+/* নেভিগেশন আইটেমগুলোকে এক লাইনে সাজানোর জন্য */
+.nav {
+    display: flex;
+    gap: 20px; /* আইটেমগুলোর মাঝের দূরত্ব */
+    align-items: center;
+}
+
+/* ড্রপডাউন মেনু যেন লাইনের বাইরে না যায় */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; /* মাউস নিলে যেন দেখা যায় সেভাবে সেট করা */
+    background: #1e293b;
+    z-index: 100;
+}
 
 
 
