@@ -873,7 +873,75 @@ body {
     background: #1e293b;
     z-index: 100;
 }
+/* --- Legal Section Styling --- */
+.legal-section {
+    padding: 60px 5%;
+    background-color: #f8fafc; /* হালকা ব্যাকগ্রাউন্ড */
+}
 
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.legal-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* মোবাইল ফ্রেন্ডলি করার জন্য */
+}
+
+.legal-card {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* হালকা শ্যাডো */
+}
+
+.legal-card h3 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.last-updated {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.legal-box {
+    height: 350px; /* স্ক্রিনশটের মতো উচ্চতা */
+    overflow-y: scroll; /* স্ক্রলবার চালু করা */
+    padding-right: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #334155;
+    text-align: justify;
+}
+
+/* কাস্টম স্ক্রলবার ডিজাইন */
+.legal-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.legal-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.legal-box::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* গ্রে কালার স্ক্রলবার */
+    border-radius: 10px;
+}
+
+.legal-box::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
 
 
 
