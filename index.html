@@ -249,12 +249,13 @@
         </a>
     </div>
     
+   </div>
    <div class="header-whatsapp-container">
-    <button class="top-wa-btn" onclick="toggleHeaderWA()" style="cursor: pointer;">
+    <button class="top-wa-btn" onclick="toggleHeaderWA()">
         <i class="fab fa-whatsapp"></i> Chat with Us
     </button>
 
-    <div class="wa-chat-popup" id="headerWACard" style="display: none; position: fixed; bottom: 80px; right: 20px; z-index: 1000;">
+    <div class="wa-chat-popup" id="headerWACard">
         <div class="wa-popup-header">
             <div class="header-user">
                 <i class="fas fa-user-circle"></i>
@@ -263,45 +264,37 @@
                     <p>Online</p>
                 </div>
             </div>
-            <button class="close-wa" onclick="toggleHeaderWA()" style="background:none; border:none; color:white; font-size:20px; cursor:pointer;">&times;</button>
+            <button class="close-wa" onclick="toggleHeaderWA()">&times;</button>
         </div>
         <div class="wa-popup-body">
             <div class="wa-chat-bubble">👋 Hi! How can we help you today?</div>
             <div class="wa-quick-options">
                 <a href="https://wa.me/8801722607613?text=I%20need%20Network%20Support" target="_blank" class="wa-opt">Network Support</a>
                 <a href="https://wa.me/8801722607613?text=Pricing%20Inquiry" target="_blank" class="wa-opt">Pricing Inquiry</a>
+                <a href="https://wa.me/8801722607613?text=Tell%20me%20more" target="_blank" class="wa-opt">Tell me more</a>
             </div>
-            <div class="wa-direct-input" style="display: flex; margin-top: 10px;">
-                <input type="text" id="waDirectMsg" placeholder="Type and press enter.." style="flex: 1; padding: 5px;" onkeypress="if(event.key === 'Enter') sendDirectWA()">
-                <button onclick="sendDirectWA()" style="padding: 5px 10px; cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
+            <div class="wa-direct-input">
+                <input type="text" id="waDirectMsg" placeholder="Type and press enter..">
+                <button onclick="sendDirectWA()"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-// বাটন শো বা হাইড করার জন্য
 function toggleHeaderWA() {
     const card = document.getElementById('headerWACard');
-    if (card.style.display === 'none' || card.style.display === '') {
-        card.style.display = 'block';
-    } else {
-        card.style.display = 'none';
-    }
+    card.style.display = (card.style.display === 'block') ? 'none' : 'block';
 }
 
-// মেসেজ পাঠানোর মেইন ফাংশন
 function sendDirectWA() {
-    const msgInput = document.getElementById('waDirectMsg');
-    const msg = msgInput.value;
-    const phoneNumber = "8801722607613";
-
-    if(msg.trim() !== "") {
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
-        window.open(url, '_blank'); 
-        msgInput.value = ""; // বক্স খালি করার জন্য
-    } else {
-        alert("Please type a message first!");
+    const msg = document.getElementById('waDirectMsg').value;
+    if(msg) {
+        window.open(`https://wa.me/8801722607613?text=${encodeURIComponent(msg)}`, '_blank');
     }
 }
 </script>
+    
+</body>
+
+</html>
