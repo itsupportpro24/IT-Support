@@ -983,17 +983,15 @@ body {
 .legal-header-section {
     text-align: center; /* Heading middle-e anbe */
     width: 100%;
-    margin: 40px 0 30px 0; /* Upore ebong niche faka korbe */
+    margin: 30px 0 20px 0; /* Upore ebong niche faka korbe */
 }
-
 .main-legal-title {
-    font-size: 30px;
+    font-size: 40px;
     color: #2c3e50; /* Card header-er sathe mil rekhe dark blue */
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: 0.5px;
 }
-
 .header-line {
     width: 60px;
     height: 4px;
