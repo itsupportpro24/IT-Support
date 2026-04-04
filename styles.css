@@ -883,7 +883,7 @@ body {
 }
 /* Legal Section Styling */
 .legal-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #f8f9fa; /* Light grey background */
 }
 
@@ -891,7 +891,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -983,18 +983,18 @@ body {
 .legal-header-section {
     text-align: center; /* Heading middle-e anbe */
     width: 100%;
-    margin: 30px 0 20px 0; /* Upore ebong niche faka korbe */
+    margin: 20px 0 10px 0; /* Upore ebong niche faka korbe */
 }
 .main-legal-title {
     font-size: 40px;
     color: #2c3e50; /* Card header-er sathe mil rekhe dark blue */
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     letter-spacing: 0.5px;
 }
 .header-line {
-    width: 60px;
-    height: 4px;
+    width: 30px;
+    height: 2px;
     background-color: #3498db; /* Blue accent color */
     margin: 0 auto; /* Line-ti middle-e anbe */
     border-radius: 2px;
