@@ -249,12 +249,13 @@
         </a>
     </div>
     
+   </div>
    <div class="header-whatsapp-container">
     <button class="top-wa-btn" onclick="toggleHeaderWA()">
         <i class="fab fa-whatsapp"></i> Chat with Us
     </button>
 
-    <div class="wa-chat-popup" id="headerWACard" style="display: none;">
+    <div class="wa-chat-popup" id="headerWACard">
         <div class="wa-popup-header">
             <div class="header-user">
                 <i class="fas fa-user-circle"></i>
@@ -273,7 +274,7 @@
                 <a href="https://wa.me/8801722607613?text=Tell%20me%20more" target="_blank" class="wa-opt">Tell me more</a>
             </div>
             <div class="wa-direct-input">
-                <input type="text" id="waDirectMsg" placeholder="Type and press enter.." onkeypress="if(event.key === 'Enter') sendDirectWA()">
+                <input type="text" id="waDirectMsg" placeholder="Type and press enter..">
                 <button onclick="sendDirectWA()"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
@@ -281,28 +282,22 @@
 </div>
 
 <script>
-// উইজেট ওপেন বা ক্লোজ করার ফাংশন
 function toggleHeaderWA() {
     const card = document.getElementById('headerWACard');
     card.style.display = (card.style.display === 'block') ? 'none' : 'block';
 }
 
-// সরাসরি মেসেজ পাঠানোর ফাংশন
 function sendDirectWA() {
-    const msgInput = document.getElementById('waDirectMsg');
-    const msg = msgInput.value;
-    const phoneNumber = "8801722607613";
-
-    if(msg.trim() !== "") {
-        // নতুন ট্যাবে হোয়াটসঅ্যাপ ওপেন হবে এবং ইউজারের টাইপ করা মেসেজটি নিয়ে যাবে
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
-        window.open(url, '_blank').focus();
-        
-        // মেসেজ পাঠানোর পর ইনপুট বক্সটি খালি হয়ে যাবে
-        msgInput.value = "";
+    const msg = document.getElementById('waDirectMsg').value;
+    if(msg) {
+        window.open(`https://wa.me/8801722607613?text=${encodeURIComponent(msg)}`, '_blank');
     }
 }
 </script>
+    
+</body>
+
+</html>
 
 
 
